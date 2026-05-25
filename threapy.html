@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MindCare Therapy</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4fbff;
+    color:#333;
+}
+
+/* NAVBAR */
+
+nav{
+    background:#fafcfd;
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    color:#00b4d8;
+    font-size:30px;
+    font-weight:bold;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav ul li a{
+    color:#555e;
+    text-decoration:none;
+    font-size:18px;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#ffd166;
+}
+
+/* HERO SECTION */
+
+.hero{
+    height:90vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('https://images.unsplash.com/photo-1493836512294-502baa1986e2');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero-content{
+    max-width:700px;
+    color:white;
+}
+
+.hero-content h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:22px;
+    line-height:1.7;
+    margin-bottom:30px;
+}
+
+.hero-content button{
+    padding:15px 35px;
+    font-size:18px;
+    border:none;
+    border-radius:30px;
+    background:#00b4d8;
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.hero-content button:hover{
+    background:#0077b6;
+}
+
+/* SECTION */
+
+section{
+    padding:80px 10%;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.title h2{
+    font-size:42px;
+    color:#0077b6;
+    margin-bottom:15px;
+}
+
+.title p{
+    font-size:18px;
+    color:#666;
+}
+
+/* PROBLEMS */
+
+.problem-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.problem-card{
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.problem-card:hover{
+    transform:translateY(-10px);
+}
+
+.problem-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:15px;
+    margin-bottom:15px;
+}
+
+.problem-card h3{
+    color:#023047;
+    margin-bottom:10px;
+}
+
+/* THERAPY */
+
+.therapy{
+    background:#dff6ff;
+}
+
+.therapy-box{
+    display:flex;
+    flex-wrap:wrap;
+    gap:40px;
+    align-items:center;
+}
+
+.therapy-box img{
+    width:450px;
+    max-width:100%;
+    border-radius:20px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+.therapy-text{
+    flex:1;
+}
+
+.therapy-text h3{
+    font-size:38px;
+    color:#0077b6;
+    margin-bottom:20px;
+}
+
+.therapy-text p{
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+/* SERVICES */
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:25px;
+}
+
+.service-card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.service-card:hover{
+    transform:scale(1.05);
+}
+
+.service-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.service-content{
+    padding:20px;
+}
+
+.service-content h3{
+    color:#0077b6;
+    margin-bottom:10px;
+}
+
+/* CONTACT */
+
+.contact{
+    background:#023047;
+    color:white;
+    text-align:center;
+    border-radius:20px;
+}
+
+.contact h2{
+    margin-bottom:20px;
+}
+
+.contact p{
+    margin-bottom:15px;
+    font-size:18px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#001219;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:50px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero-content h1{
+        font-size:40px;
+    }
+
+    .therapy-box{
+        flex-direction:column;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+    <div class="logo">Threapy</div>
+
+    <ul>
+        <li><a href="ANIMAL.HTML">Home</a></li>
+       
+    </ul>
+
+</nav>
+
+<!-- HERO SECTION -->
+
+ <!-- <div class="hero">
+
+    <div class="hero-content">
+
+        <h1>Online Therapy for Mental Wellness</h1>
+
+        <p>
+            Helping humans reduce stress, depression, anxiety,
+            loneliness, and emotional pressure through online therapy
+            and relaxing animal sound healing.
+        </p>
+
+        <button>Start Therapy</button>
+
+    </div> 
+
+</div> -->
+
+<!-- PROBLEMS SECTION -->
+
+<section>
+
+    <div class="title">
+        <h2>Mental Health Problems</h2>
+        <p>Common emotional and mental problems faced by humans.</p>
+    </div>
+
+    <div class="problem-container">
+
+        <div class="problem-card">
+            <img src="https://images.unsplash.com/photo-1493836512294-502baa1986e2">
+            <h3>Stress</h3>
+            <p>
+                Work pressure, studies, and daily life can increase mental stress.
+            </p>
+        </div>
+
+        <div class="problem-card">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9">
+            <h3>Depression</h3>
+            <p>
+                Depression causes sadness, low motivation, and emotional pain.
+            </p>
+        </div>
+
+        <div class="problem-card">
+            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1">
+            <h3>Anxiety</h3>
+            <p>
+                Anxiety creates fear, nervousness, and overthinking.
+            </p>
+        </div>
+
+        <div class="problem-card">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e">
+            <h3>Loneliness</h3>
+            <p>
+                Emotional isolation can affect mental and physical health.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- THERAPY SECTION -->
+
+<section class="therapy">
+
+    <div class="title">
+        <h2>Animal Sound Therapy</h2>
+        <p>Natural sound healing for relaxation and peace.</p>
+    </div>
+
+    <div class="therapy-box">
+
+        <img src="https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9">
+
+        <div class="therapy-text">
+
+            <h3><a href="pet.html">Your Mind Naturally</a> </h3>
+
+            <p>
+                Animal sound therapy uses calming sounds from birds,
+                dolphins, whales, cats, rainforests, and nature to
+                reduce stress and improve emotional balance.
+            </p>
+
+            <p>
+                Listening to peaceful sounds helps the brain feel calm,
+                improves sleep quality, and supports mental wellness.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section>
+
+    <div class="title">
+        <h2>Our Online Therapy Services</h2>
+        <p>Helping people feel mentally stronger and happier.</p>
+    </div>
+
+    <div class="services">
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3">
+            <div class="service-content">
+                <h3>Online Counseling</h3>
+                <p>Talk with therapists through video and chat sessions.</p>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773">
+            <div class="service-content">
+                <h3>Meditation Therapy</h3>
+                <p>Guided meditation for relaxation and stress relief.</p>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1444464666168-49d633b86797">
+            <div class="service-content">
+                <h3>Bird Sound Therapy</h3>
+                <p>Natural bird sounds for calming the human brain.</p>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5">
+            <div class="service-content">
+                <h3>Dolphin Therapy</h3>
+                <p>Ocean and dolphin sounds for emotional healing.</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<!-- <section>
+
+    <div class="contact">
+
+        <h2>Need Support?</h2>
+
+        <p>Email: support@mindcaretherapy.com</p>
+        <p>Phone: +91 98765 43210</p>
+        <p>Available 24/7 for online therapy support</p>
+
+    </div>
+
+</section> -->
+
+<!-- FOOTER -->
+<!-- 
+<footer>
+    <p>
+        © 2026 MindCare Therapy | Online Stress & Depression Support 🌿
+    </p>
+</footer> -->
+
+</body>
+</html>

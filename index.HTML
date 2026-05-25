@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Animal Sound Therapy</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body{
+      background:#f5fff9;
+      overflow-x:hidden;
+      color:#222;
+    }
+
+    /* ================= NAVBAR ================= */
+
+    header{
+      width:100%;
+      height:80px;
+      background:white;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:0 8%;
+      position:fixed;
+      top:0;
+      left:0;
+      z-index:1000;
+      box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    .logo{
+      font-size:30px;
+      font-weight:bold;
+      color:#1f7a52;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:35px;
+    }
+
+    nav ul li a{
+      text-decoration:none;
+      color:#333;
+      font-size:18px;
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#1f7a52;
+    }
+
+    .btn{
+      padding:12px 28px;
+      background:#1f7a52;
+      color:white;
+      border:none;
+      border-radius:30px;
+      cursor:pointer;
+      font-size:16px;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#14563a;
+      transform:scale(1.05);
+    }
+
+    /* ================= HERO SECTION ================= */
+
+    .hero{
+      width:100%;
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:120px 8% 60px;
+      gap:50px;
+      flex-wrap:wrap;
+    }
+
+    .hero-text{
+      flex:1;
+      min-width:320px;
+    }
+
+    .hero-text h1{
+      font-size:65px;
+      line-height:1.2;
+      margin-bottom:20px;
+      color:#124734;
+    }
+
+    .hero-text p{
+      font-size:18px;
+      line-height:1.8;
+      color:#555;
+      margin-bottom:35px;
+      max-width:600px;
+    }
+
+    .hero-image{
+      flex:1;
+      min-width:320px;
+      display:flex;
+      justify-content:center;
+    }
+
+    .hero-image img{
+      width:100%;
+      max-width:550px;
+      height:auto;
+      border-radius:25px;
+      object-fit:cover;
+      box-shadow:0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    /* ================= FEATURES ================= */
+
+    .features{
+      width:100%;
+      padding:80px 8%;
+      background:white;
+      text-align:center;
+    }
+
+    .features h2{
+      font-size:45px;
+      margin-bottom:50px;
+      color:#124734;
+    }
+
+    .feature-container{
+      width:100%;
+      display:flex;
+      justify-content:center;
+      gap:30px;
+      flex-wrap:wrap;
+    }
+
+    .card{
+      width:320px;
+      min-height:280px;
+      background:#f1fff8;
+      border-radius:20px;
+      padding:35px 25px;
+      transition:0.4s;
+      box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+    }
+
+    .card .icon{
+      font-size:60px;
+      margin-bottom:20px;
+    }
+
+    .card h3{
+      font-size:28px;
+      margin-bottom:15px;
+      color:#1f7a52;
+    }
+
+    .card p{
+      font-size:16px;
+      line-height:1.7;
+      color:#555;
+    }
+
+    /* ================= ABOUT ================= */
+
+    .about{
+      width:100%;
+      padding:100px 8%;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:50px;
+      flex-wrap:wrap;
+      background:#e9fff4;
+    }
+
+    .about-image{
+      flex:1;
+      min-width:320px;
+    }
+
+    .about-image img{
+      width:100%;
+      max-width:500px;
+      border-radius:20px;
+      object-fit:cover;
+    }
+
+    .about-text{
+      flex:1;
+      min-width:320px;
+    }
+
+    .about-text h2{
+      font-size:48px;
+      margin-bottom:20px;
+      color:#124734;
+    }
+
+    .about-text p{
+      font-size:18px;
+      line-height:1.8;
+      color:#444;
+      margin-bottom:25px;
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer{
+      width:100%;
+      background:#124734;
+      color:white;
+      text-align:center;
+      padding:25px;
+      font-size:16px;
+    }
+   
+    /* ================= RESPONSIVE ================= */
+
+    @media(max-width:992px){
+
+      .hero-text h1{
+        font-size:50px;
+      }
+
+      .features h2,
+      .about-text h2{
+        font-size:38px;
+      }
+    }
+
+    @media(max-width:768px){
+
+      header{
+        height:auto;
+        padding:20px 5%;
+        flex-direction:column;
+        gap:15px;
+      }
+
+      nav ul{
+        gap:20px;
+        flex-wrap:wrap;
+        justify-content:center;
+      }
+
+      .hero{
+        text-align:center;
+        padding-top:170px;
+      }
+
+      .hero-text h1{
+        font-size:42px;
+      }
+
+      .hero-text p{
+        margin:auto auto 30px;
+      }
+
+      .about{
+        text-align:center;
+      }
+    }
+
+    @media(max-width:500px){
+
+      .hero-text h1{
+        font-size:34px;
+      }
+
+      .features h2,
+      .about-text h2{
+        font-size:30px;
+      }
+
+      .card{
+        width:100%;
+      }
+    }
+    a {
+      text-decoration: none;
+      color: #f1fff8;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+
+    <div class="logo">Animal Therapy</div>
+
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Meditation</a></li>
+        <li><a href="#">Relax Sounds</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <button class="btn"><a href="stresschech.html"> check stress level</a> </button>
+
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+
+    <div class="hero-text">
+      <h1>Healing Through Animal Sounds</h1>
+
+      <p>
+        Relax your body and mind with peaceful sounds of birds,
+        whales, forests, cats, and natural wildlife therapy audio.
+        Improve sleep, reduce stress, and feel calm naturally.
+      </p>
+
+      <button class="btn"><a href="threapy.html"> Start Therapy </a></button>
+    </div>
+
+    <div class="hero-image">
+
+    </div>
+
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+
+    <h2>Therapy Benefits</h2>
+    
+    <div class="feature-container">
+
+      <div class="card">
+        <div class="icon">🐦</div>
+           <a href="birdmusic.html">
+             <h3>Bird Music</h3>
+           </a>
+        <p>
+          Natural bird sounds help improve focus, relaxation,
+          and emotional balance.
+        </p>
+        
+      </div>       
+
+</button>
+      <div class="card">
+        <div class="icon">🐋</div>
+        <a href="seaanimal.html">
+        <h3>Ocean Calm</h3>
+        </a>
+        <p>
+          Whale and ocean frequencies provide deep meditation
+          and peaceful sleep support.
+        </p>
+      </div>
+</button>
+</button>
+      <div class="card">
+      <div class="icon">🐱</div>
+      <a href="pet.html">
+        <h3>Pet Comfort</h3>
+        </a>
+        <p>
+          Soft pet sounds and cat purring create warmth,
+          comfort, and stress relief.
+        </p>
+      </div>
+</button>
+    </div>
+
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="about">
+
+    <div class="about-image">
+      <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?q=80&w=1200&auto=format&fit=crop" alt="Nature Therapy">
+    </div>
+
+    <div class="about-text">
+      <h2>Nature Meets Relaxation</h2>
+
+      <p>
+        Animal Sound Therapy combines natural audio healing with
+        mindfulness practices to help reduce anxiety and improve mental wellness.
+      </p>
+
+      <p>
+        Listen to calming wildlife sounds anytime and create your own peaceful environment.
+      </p>
+
+      <button class="btn">Explore More</button>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 Animal Sound Therapy | All Rights Reserved
+  </footer>
+
+</body>
+</html>

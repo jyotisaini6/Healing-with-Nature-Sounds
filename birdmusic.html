@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bird Music Therapy</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#f4fff7;
+      color:#222;
+    }
+
+    /* ================= NAVBAR ================= */
+
+    .navbar{
+      width:100%;
+      height:80px;
+      background:#f3f5f4;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:0 60px;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    .logo{
+      color:#1f7a52;
+      font-size:32px;
+      font-weight:bold;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:30px;
+    }
+
+    .nav-links a{
+      text-decoration:none;
+      color:#333;
+      font-size:18px;
+      transition:0.3s;
+    }
+
+    .nav-links a:hover{
+      color:#d4ffe6;
+    }
+
+    /* ================= HERO SECTION ================= */
+
+    .hero{
+      width:100%;
+      height:90vh;
+      background:url('https://images.unsplash.com/photo-1444464666168-49d633b86797?q=80&w=1400&auto=format&fit=crop') center/cover no-repeat;
+      position:relative;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+    }
+
+    .overlay{
+      position:absolute;
+      width:100%;
+      height:100%;
+      background:rgba(0,0,0,0.5);
+      top:0;
+      left:0;
+    }
+
+    .hero-content{
+      position:relative;
+      z-index:2;
+      color:white;
+      width:80%;
+      max-width:800px;
+    }
+
+    .hero-content h1{
+      font-size:65px;
+      margin-bottom:20px;
+    }
+
+    .hero-content p{
+      font-size:22px;
+      line-height:1.7;
+      margin-bottom:30px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:15px 35px;
+      background:#2bb673;
+      color:white;
+      text-decoration:none;
+      border-radius:30px;
+      font-size:18px;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#14784a;
+    }
+
+    /* ================= BIRD SECTION ================= */
+
+    .birds{
+      width:100%;
+      padding:80px 60px;
+      text-align:center;
+    }
+
+    .birds h2{
+      font-size:48px;
+      color:#1f7a52;
+      margin-bottom:20px;
+    }
+
+    .birds p{
+      font-size:18px;
+      color:#555;
+      margin-bottom:50px;
+    }
+
+    .bird-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+    }
+
+    .bird-card{
+      background:white;
+      border-radius:20px;
+      overflow:hidden;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+      transition:0.3s;
+    }
+
+    .bird-card:hover{
+      transform:translateY(-10px);
+    }
+
+    .bird-card img{
+      width:100%;
+      height:240px;
+      object-fit:cover;
+    }
+
+    .bird-content{
+      padding:25px;
+    }
+
+    .bird-content h3{
+      font-size:30px;
+      color:#1f7a52;
+      margin-bottom:15px;
+    }
+
+    .bird-content p{
+      font-size:16px;
+      line-height:1.6;
+      color:#555;
+      margin-bottom:20px;
+    }
+
+    .play-btn{
+      display:inline-block;
+      padding:12px 28px;
+      background:#1f7a52;
+      color:white;
+      text-decoration:none;
+      border-radius:30px;
+      transition:0.3s;
+    }
+
+    .play-btn:hover{
+      background:#14563a;
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer{
+      width:100%;
+      background:#124734;
+      color:white;
+      text-align:center;
+      padding:25px;
+      margin-top:40px;
+      font-size:18px;
+    }
+
+    /* ================= RESPONSIVE ================= */
+
+    @media(max-width:768px){
+
+      .navbar{
+        flex-direction:column;
+        height:auto;
+        padding:20px;
+      }
+
+      .nav-links{
+        margin-top:15px;
+        flex-wrap:wrap;
+        justify-content:center;
+      }
+
+      .hero-content h1{
+        font-size:42px;
+      }
+
+      .hero-content p{
+        font-size:18px;
+      }
+
+      .birds{
+        padding:50px 20px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <div class="navbar">
+
+    <div class="logo">Bird Music</div>
+
+    <div class="nav-links">
+      <a href="ANIMAL.HTML">Home</a>
+      
+    </div>
+
+  </div>
+
+  <!-- HERO SECTION -->
+
+  <section class="hero">
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+
+      <h1>Relax Your Mind With Bird Music</h1>
+
+      <p>
+        Listen to peaceful bird sounds that help reduce stress,
+        improve sleep, calm anxiety, and refresh your mind naturally.
+      </p>
+
+      <a href="#" class="btn">Start Listening</a>
+
+    </div>
+
+  </section>
+
+  <!-- BIRD MUSIC SECTION -->
+
+  <section class="birds">
+
+    <h2>Popular Bird Music Collection</h2>
+
+    <p>
+      Explore relaxing bird sounds from nature for meditation,
+      therapy, deep sleep, and stress relief.
+    </p>
+
+    <div class="bird-container">
+
+      <!-- Sparrow -->
+      <div class="bird-card">
+        <img src="https://images.unsplash.com/photo-1444464666168-49d633b86797?q=80&w=1200&auto=format&fit=crop" alt="Sparrow Bird">
+        <div class="bird-content">
+          <h3>Sparrow</h3>
+          <p>Soft sparrow chirping creates peaceful and positive feelings.</p>
+          <a href="sparrow.mp3" class="play-btn">Play Music</a>
+        </div>
+      </div>
+
+      <!-- Dove -->
+      <div class="bird-card">
+        <img src="https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=1200&auto=format&fit=crop" alt="Dove Bird">
+        <div class="bird-content">
+          <h3>Dove</h3>
+          <p>Dove sounds bring emotional peace and reduce mental stress.</p>
+          <a href="#" class="play-btn">Play Music</a>
+        </div>
+      </div>
+
+      <!-- Canary -->
+      <div class="bird-card">
+        <img src="https://images.unsplash.com/photo-1466721591366-2d5fba72006d?q=80&w=1200&auto=format&fit=crop" alt="Canary Bird">
+        <div class="bird-content">
+          <h3>Canary</h3>
+          <p>Canary singing creates happiness and natural relaxation.</p>
+          <a href="#" class="play-btn">Play Music</a>
+        </div>
+      </div>
+
+      <!-- Koel -->
+      <div class="bird-card">
+        <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?q=80&w=1200&auto=format&fit=crop" alt="Koel Bird">
+        <div class="bird-content">
+          <h3>Koel</h3>
+          <p>Koel bird melodies are sweet and soothing for the human mind.</p>
+          <a href="#" class="play-btn">Play Music</a>
+        </div>
+      </div>
+
+      <!-- Cuckoo -->
+      <div class="bird-card">
+        <img src="https://images.unsplash.com/photo-1452570053594-1b985d6ea890?q=80&w=1200&auto=format&fit=crop" alt="Cuckoo Bird">
+        <div class="bird-content">
+          <h3>Cuckoo</h3>
+          <p>Cuckoo calls provide a natural forest-like peaceful feeling.</p>
+          <a href="#" class="play-btn">Play Music</a>
+        </div>
+      </div>
+
+      <!-- Owl -->
+      <div class="bird-card">
+        <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?q=80&w=1200&auto=format&fit=crop" alt="Owl Bird">
+        <div class="bird-content">
+          <h3>Owl</h3>
+          <p>Night owl sounds are perfect for deep nighttime relaxation.</p>
+          <a href="#" class="play-btn">Play Music</a>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+    © 2026 Bird Music Therapy | Relax • Heal • Sleep
+  </footer>
+
+</body>
+</html>

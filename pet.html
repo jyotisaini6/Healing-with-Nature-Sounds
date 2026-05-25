@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Animal Sounds for Stress Relief</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background: linear-gradient(to bottom, #f0fff4, #d9f7e6);
+      color:#234;
+    }
+
+    /* Navbar */
+    nav{
+      background:#f9fafa;
+      padding:15px;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    nav ul{
+      display:flex;
+      justify-content:center;
+      gap:25px;
+      list-style:none;
+      flex-wrap:wrap;
+    }
+
+    nav ul li a{
+      color:#333;
+      text-decoration:none;
+      font-size:18px;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#ffe082;
+    }
+
+    /* Hero Section */
+    .hero{
+      background:url('https://images.unsplash.com/photo-1506744038136-46273834b3fb') center/cover;
+      height:350px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      color:white;
+      padding:20px;
+    }
+
+    .hero h1{
+      font-size:50px;
+      text-shadow:2px 2px 5px black;
+    }
+
+    .hero p{
+      margin-top:15px;
+      font-size:22px;
+      max-width:700px;
+    }
+
+    /* Cards */
+    .container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:25px;
+      padding:40px;
+    }
+
+    .card{
+      background:white;
+      border-radius:15px;
+      overflow:hidden;
+      box-shadow:0 5px 15px rgba(0,0,0,0.2);
+      transition:0.4s;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+    }
+
+    .card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+    }
+
+    .card-content{
+      padding:20px;
+    }
+
+    .card-content h2{
+      margin-bottom:10px;
+      color:#2e8b57;
+    }
+
+    .card-content p{
+      margin-bottom:15px;
+      line-height:1.6;
+    }
+
+    audio{
+      width:100%;
+    }
+
+    /* Benefits Section */
+    .benefits{
+      padding:50px 20px;
+      text-align:center;
+      background:#ffffff;
+    }
+
+    .benefits h2{
+      color:#2e8b57;
+      margin-bottom:20px;
+    }
+
+    .benefits p{
+      max-width:900px;
+      margin:auto;
+      font-size:18px;
+      line-height:1.8;
+    }
+
+    /* Footer */
+    footer{
+      background:#2e8b57;
+      color:white;
+      text-align:center;
+      padding:20px;
+      margin-top:30px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="ANIMAL.HTML">Home</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Animal Sounds Therapy</h1>
+    <p>
+      Relax your mind and reduce stress with soothing animal sounds from nature.
+    </p>
+  </section>
+
+  <!-- Animal Cards -->
+  <section class="container" id="animals">
+
+    <!-- Cat -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131" alt="Cat">
+      <div class="card-content">
+        <h2>Cat</h2>
+        <p>Cat purring helps reduce anxiety and creates a peaceful feeling.</p>
+        <audio controls>
+          <source src="cat purring.mp3" type="audio/mp3">
+        </audio>
+      </div>
+    </div>
+
+    <!-- Dog -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a" alt="Dog">
+      <div class="card-content">
+        <h2>Dog</h2>
+        <p>Dog sounds bring comfort, emotional support, and happiness.</p>
+        <audio controls>
+          <source src="dog.mp3" type="audio/mp3">
+        </audio>
+      </div>
+    </div>
+
+    <!-- Cow -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30" alt="Cow">
+      <div class="card-content">
+        <h2>Cow</h2>
+        <p>Cow sounds create a calm village atmosphere and reduce stress.</p>
+        <audio controls>
+          <source src="cow.mp3" type="audio/mp3">
+        </audio>
+      </div>
+    </div>
+
+
+    <!-- Elephant -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1557050543-4d5f4e07ef46" alt="Elephant">
+      <div class="card-content">
+        <h2>Elephant</h2>
+        <p>Elephant sounds help improve mindfulness and emotional calmness.</p>
+        <audio controls>
+          <source src="elephant.mp3" type="audio/mp3">
+        </audio>
+      </div>
+    </div>
+
+    <!-- Sheep -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1484557985045-edf25e08da73" alt="Sheep">
+      <div class="card-content">
+        <h2>Sheep</h2>
+        <p>Sheep sounds provide peaceful rural vibes that help sleep better.</p>
+        <audio controls>
+          <source src="sheep.mp3" type="audio/mp3">
+        </audio>
+      </div>
+    </div>
+
+    <!-- Rabbit -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308" alt="Rabbit">
+      <div class="card-content">
+        <h2>Rabbit</h2>
+        <p>Rabbit presence and soft sounds create comfort and emotional peace.</p>
+        <audio controls>
+          <source src="rabbit.mp3" type="audio/mp3">
+        </audio>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="benefits" id="benefits">
+    <h2>Benefits of Animal Sounds</h2>
+    <p>
+      Listening to animal sounds can reduce stress, calm the nervous system,
+      improve sleep quality, lower anxiety, and create a positive emotional
+      environment. Nature-based sounds help people feel more connected to the
+      natural world and support mental wellness.
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <p>© 2026 Animal Sounds Therapy Website</p>
+  </footer>
+
+</body>
+</html>

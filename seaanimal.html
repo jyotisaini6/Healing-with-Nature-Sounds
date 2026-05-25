@@ -1,0 +1,221 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ocean Animal Healing Sounds</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background: linear-gradient(to bottom, #b3ecff, #e6f9ff);
+      color:#00334d;
+    }
+
+    /* Navigation Bar */
+    nav{
+      background:#006994;
+      padding:15px;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    nav ul{
+      display:flex;
+      justify-content:center;
+      list-style:none;
+      gap:25px;
+      flex-wrap:wrap;
+    }
+
+    nav ul li a{
+      text-decoration:none;
+      color:white;
+      font-size:18px;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#ffeb99;
+    }
+
+    /* Header */
+    header{
+      text-align:center;
+      padding:50px 20px;
+      background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover;
+      color:white;
+    }
+
+    header h1{
+      font-size:50px;
+      text-shadow:2px 2px 5px black;
+    }
+
+    header p{
+      margin-top:15px;
+      font-size:22px;
+    }
+
+    /* Animal Section */
+    .container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:25px;
+      padding:40px;
+    }
+
+    .card{
+      background:white;
+      border-radius:15px;
+      overflow:hidden;
+      box-shadow:0 5px 15px rgba(0,0,0,0.2);
+      transition:0.4s;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+    }
+
+    .card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+    }
+
+    .card-content{
+      padding:20px;
+    }
+
+    .card-content h2{
+      margin-bottom:10px;
+      color:#006994;
+    }
+
+    .card-content p{
+      margin-bottom:15px;
+      line-height:1.5;
+    }
+
+    audio{
+      width:100%;
+    }
+
+    footer{
+      background:#006994;
+      color:white;
+      text-align:center;
+      padding:20px;
+      margin-top:30px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="ANIMAL.HTML">Home</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <h1>Ocean Animal Healing Sounds</h1>
+    <p>Relax Your Mind with Natural Ocean Animal Sounds</p>
+  </header>
+
+  <!-- Animal Cards -->
+  <section class="container" id="animals">
+
+    <!-- Dolphin -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5" alt="Dolphin">
+      <div class="card-content">
+        <h2>Dolphin</h2>
+        <p>Dolphin sounds help reduce stress and improve mental relaxation.</p>
+        <audio controls>
+          <source src="dolphin.mp3" type="audio/mp3">
+        </audio>
+      </div>
+    </div>
+
+    <!-- Whale -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1568438350562-2cae6d394ad0" alt="Whale">
+      <div class="card-content">
+        <h2>Whale</h2>
+        <p>Whale songs promote deep meditation and peaceful sleep.</p>
+        <audio controls>
+          <source src="whale.mp3" type="audio/mp3">
+        </audio>
+      </div>
+    </div>
+
+    <!-- Seal -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1516939884455-1445c8652f83" alt="Seal">
+      <div class="card-content">
+        <h2>Seal</h2>
+        <p>Seal sounds create calmness and emotional comfort.</p>
+        <audio controls>
+          <source src="seal.mp3" type="audio/mp3">
+        </audio>
+      </div>
+    </div>
+
+
+    <!-- Seagull -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Seagull">
+      <div class="card-content">
+        <h2>Seagull</h2>
+        <p>Seagull sounds remind people of peaceful beaches and relaxation.</p>
+        <audio controls>
+          <source src="seagull.mp3" type="audio/mp3">
+        </audio>
+      </div>
+    </div>
+
+
+
+    <!-- Otter -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13" alt="Otter">
+      <div class="card-content">
+        <h2>Otter</h2>
+        <p>Otter sounds bring happiness and emotional positivity.</p>
+        <audio controls>
+          <source src="otter.mp3" type="audio/mp3">
+        </audio>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Health Section -->
+  <section id="health" style="padding:40px; text-align:center;">
+    <h2 style="margin-bottom:20px;">Health Benefits of Nature Sounds</h2>
+    <p style="font-size:18px; max-width:900px; margin:auto; line-height:1.8;">
+      Ocean and nature animal sounds help humans reduce stress, improve sleep,
+      lower anxiety, increase focus, and support meditation. Listening to dolphin,
+      whale, frog, and cricket sounds creates a calming environment that improves
+      mental health and emotional balance.
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <p>© 2026 Ocean Animal Healing Sounds Website</p>
+  </footer>
+
+</body>
+</html>
